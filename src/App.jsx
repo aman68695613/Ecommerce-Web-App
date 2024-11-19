@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <div className=''>
-     <Navbar />
+     <Navbar/>
      <Category/>
      <Category2/>
     </div>

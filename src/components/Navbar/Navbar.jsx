@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
+import DarkMode from './DarkMode'
 import { IoMdSearch } from 'react-icons/io'
 import { FaCartShopping } from 'react-icons/fa6'
 
@@ -28,8 +29,8 @@ const MenuLinks =[
 const Navbar = () => {
   return (
     <div className='bg-white dark:bg-gray-900 dark:text-white 
-    duration-200 relative z-40 '>
-       <div className='py-1'>
+    duration-200 relative z-40'>
+       <div className='py-4'>
         <div className='container flex justify-between items-center'>
             {/* logo or logo ki routing ki hai */}
             <div className='flex gap-4 items-center'>
@@ -80,7 +81,7 @@ const Navbar = () => {
                     </button>
                     {/* Dark mode ka feature  */}
                     <div>
-                        {/* <DarkMode /> */}
+                        <DarkMode />
                     </div>                  
                 </div>
             </div>
