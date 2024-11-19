@@ -39,10 +39,11 @@ const Navbar = () => {
           <div className="flex gap-4 items-center">
             <a
               href="#"
-              className="text-primary font-semibold 
+              className="text-white bg-black rounded-xl p-3 font-semibold 
                 tracking-widest text-2xl sm:text-3xl"
             >
-              HoeStop
+              <span>Hoe</span>
+              <span className='text-black bg-[#ffa31a] rounded-xl'>Stop</span>
             </a>
             {/* Navigation Links */}
             <div className="hidden lg:block">
