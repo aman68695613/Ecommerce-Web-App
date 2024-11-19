@@ -1,8 +1,9 @@
 
 
 import './App.css'
+import Footer from './components/Footer/Footer.jsx';
 import Navbar from "./components/Navbar/Navbar";
-
+import Partners from "./components/Partners/Partners.jsx"
 function App() {
  
 
@@ -10,6 +11,8 @@ function App() {
     <>
     <div className=''>
      <Navbar />
+     <Partners/>
+     <Footer />
     </div>
     </>
   )
