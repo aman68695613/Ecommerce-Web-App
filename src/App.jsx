@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
  
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
     <div className=''>
-     <h1 className='font-bold bg-cyan-500 h-12 w-full'>Lund lelo sab</h1>
+     <Navbar />
     </div>
     </>
   )
