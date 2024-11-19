@@ -2,9 +2,12 @@
 
 import React from 'react';
 import './App.css'
+import Footer from './components/Footer/Footer.jsx';
+import Navbar from "./components/Navbar/Navbar";
+import Partners from "./components/Partners/Partners.jsx"
 import Category from './components/Category/Category';
 import Category2 from './components/Category/Category2';
-import Navbar from "./components/Navbar/Navbar";
+
 import Services from './components/Services/Services';
 import Banner from './components/Banner/Banner';
 import headphone from "./assets/hero/headphone.png"
@@ -30,6 +33,8 @@ function App() {
      <Services/>
      <Banner data={BannerData}/>
      <Products/>
+     <Partners/>
+     <Footer />
     </div>
     </>
   )
