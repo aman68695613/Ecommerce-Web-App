@@ -1,6 +1,8 @@
 
 
 import './App.css'
+import Category from './components/Category/Category';
+import Category2 from './components/Category/Category2';
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
     <>
     <div className=''>
      <Navbar />
+     <Category/>
+     <Category2/>
     </div>
     </>
   )
