@@ -1,9 +1,11 @@
-/* eslint-disable react/prop-types */
 
+
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react';
 import './App.css'
 import Footer from './components/Footer/Footer.jsx';
 import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero.jsx";
 import Partners from "./components/Partners/Partners.jsx"
 import Category from './components/Category/Category';
 import Category2 from './components/Category/Category2';
@@ -51,6 +53,7 @@ function App() {
     <>
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden'>
      <Navbar />
+     <Hero />
      <Category/>
      <Category2/>
      <Services/>
