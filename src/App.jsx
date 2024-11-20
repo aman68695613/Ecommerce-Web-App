@@ -16,11 +16,8 @@ import Banner from './components/Banner/Banner';
 import headphone from "./assets/hero/headphone.png"
 import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png"
 import Products from './components/Products/Products';
-<<<<<<< HEAD
 import Popup from './components/Popup/Popup.jsx';
-=======
 import Blogs from './components/Blogs/Blogs.jsx';
->>>>>>> 556888e57975e1a27db80ae84e74e97d5d6db98b
 const BannerData={
     discount: "30% OFF",
     title: "Fine Smile",
@@ -43,18 +40,10 @@ const BannerData2={
     }
 
 function App() {
-<<<<<<< HEAD
   const [orderPopup, setOrderPopup]=React.useState(false);
   const handleOrderPopup=()=>{
     setOrderPopup(!orderPopup);
   }  
-
-  return (
-    <>
-    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden'>
-     <Navbar handleOrderPopup={handleOrderPopup}/>
-     <Hero handleOrderPopup={handleOrderPopup}>
-=======
   useEffect(()=>{
     AOS.init({
       duration: 800,
@@ -68,9 +57,8 @@ function App() {
   return (
     <>
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden'>
-     <Navbar />
-     <Hero />
->>>>>>> 556888e57975e1a27db80ae84e74e97d5d6db98b
+    <Navbar handleOrderPopup={handleOrderPopup}/>
+    <Hero handleOrderPopup={handleOrderPopup}/>
      <Category/>
      <Category2/>
      <Services/>
