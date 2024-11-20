@@ -12,6 +12,7 @@ import Services from './components/Services/Services';
 import Banner from './components/Banner/Banner';
 import headphone from "./assets/hero/headphone.png"
 import Products from './components/Products/Products';
+import Popup from './components/Popup/Popup.jsx';
 const BannerData={
     discount: "30% OFF",
     title: "Fine Smile",
@@ -24,10 +25,16 @@ const BannerData={
     }
 
 function App() {
+  const [orderPopup, setOrderPopup]=React.useState(false);
+  const handleOrderPopup=()=>{
+    setOrderPopup(!orderPopup);
+  }  
+
   return (
     <>
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden'>
-     <Navbar />
+     <Navbar handleOrderPopup={handleOrderPopup}/>
+     <Hero handleOrderPopup={handleOrderPopup}>
      <Category/>
      <Category2/>
      <Services/>
@@ -35,6 +42,8 @@ function App() {
      <Products/>
      <Partners/>
      <Footer />
+     <Popup orderPopup={orderPopup}
+     setOrderPopup={setorderPopup}/>
     </div>
     </>
   )
