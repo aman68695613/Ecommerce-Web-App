@@ -11,22 +11,22 @@ const MenuLinks = [
   {
     id: 1,
     name: 'Home',
-    link: '/#',
+    link: 'home',
   },
   {
     id: 2,
     name: 'Shop',
-    link: '/#shop',
+    link: 'shop',
   },
   {
     id: 3,
     name: 'About',
-    link: '/#about',
+    link: 'about',
   },
   {
     id: 4,
     name: 'Blogs',
-    link: '/#blog',
+    link: 'blog',
   },
 ];
 
@@ -54,7 +54,7 @@ const DropdownLinks=[
 
 ]
 
-const Navbar = ({handleOrderPopup}) => {
+const Navbar = ({handleOrderPopup, handleScrollTo}) => {
   return (
     <div
       className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md 
@@ -77,14 +77,23 @@ const Navbar = ({handleOrderPopup}) => {
               <ul className="flex items-center gap-4">
                 {MenuLinks.map((data, index) => (
                   <li key={index}>
-                    <a
+                    {/* <a
                       href={data.link}
                       className="inline-block px-4 font-semibold 
                         text-gray-500 hover:text-black
                         dark:hover:text-white duration-200"
                     >
                       {data.name}
-                    </a>
+                    </a> */}
+                    <button
+                      onClick={() => handleScrollTo(data.link)}
+                      className="inline-block px-4 font-semibold 
+                        text-gray-500 hover:text-black
+                        dark:hover:text-white duration-200"
+                    >
+                      {data.name}
+                    </button>
+
                   </li>
                 ))}
 

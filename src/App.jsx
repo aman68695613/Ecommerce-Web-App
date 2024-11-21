@@ -1,7 +1,7 @@
 
 
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './App.css'
 import Footer from './components/Footer/Footer.jsx';
 import Navbar from "./components/Navbar/Navbar";
@@ -18,6 +18,12 @@ import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png"
 import Products from './components/Products/Products';
 import Popup from './components/Popup/Popup.jsx';
 import Blogs from './components/Blogs/Blogs.jsx';
+import Lenis from 'lenis'
+import 'lenis/dist/lenis.css'
+// import Button from './components/Shared/Button.jsx';
+
+
+
 const BannerData={
     discount: "30% OFF",
     title: "Fine Smile",
@@ -40,6 +46,17 @@ const BannerData2={
     }
 
 function App() {
+  useEffect( () => {
+    const lenis = new Lenis()
+  
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+  
+    requestAnimationFrame(raf)
+  }, [])
+  
   const [orderPopup, setOrderPopup]=React.useState(false);
   const handleOrderPopup=()=>{
     setOrderPopup(!orderPopup);
@@ -54,20 +71,37 @@ function App() {
     });
     AOS.refresh()
   },[])
+  const blog = useRef(null);
+  const about = useRef(null);
+  const home = useRef(null);
+  const shop = useRef(null);
+  const handleScrollTo = (section) => {
+    if (section === "blog") {
+      blog.current.scrollIntoView({ behavior: "smooth" });
+    } else if (section === "about") {
+      about.current.scrollIntoView({ behavior: "smooth" });
+    }else if (section === "home") {
+      home.current.scrollIntoView({ behavior: "smooth" });
+    }else if (section === "shop") {
+      shop.current.scrollIntoView({ behavior: "smooth" });
+    }  
+      
+  
+  };
   return (
     <>
-    <div className=' bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden h-screen '>
-    <Navbar handleOrderPopup={handleOrderPopup} />
-    <Hero handleOrderPopup={handleOrderPopup}/>
+    <div  className=' bg-white dark:bg-gray-900 dark:text-white duration-200 h-[540vh]'>
+    <Navbar handleOrderPopup={handleOrderPopup} handleScrollTo={handleScrollTo}  />
+    <Hero  ref={home} handleOrderPopup={handleOrderPopup}/>
      <Category/>
      <Category2/>
      <Services/>
-     <Banner data={BannerData}/>
+     <Banner  ref={shop} data={BannerData}/>
      <Products/>
      <Banner data={BannerData2}/>
-     <Blogs/>
+     <Blogs  ref={blog}/>
      <Partners/>
-     <Footer />
+     <Footer  ref={about} />
      <Popup orderPopup={orderPopup}
      handleOrderPopup={handleOrderPopup}/>
     </div>

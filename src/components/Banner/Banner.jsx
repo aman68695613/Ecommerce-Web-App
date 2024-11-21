@@ -1,10 +1,15 @@
+/* eslint-disable react/display-name */
 /* eslint-disable react/prop-types */
-import React from 'react'
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { forwardRef, useEffect } from 'react'
 
 
-const Banner = ({data}) => {
+const Banner = forwardRef(({data},ref) => {
+
   return (
-    <div className='min-h-[550px] flex justify-center items-center py-12 '>
+    <div className='min-h-[550px] flex justify-center items-center py-12  ' ref={ref}>
         <div className='container'>
             <div  style={{backgroundColor:data.bgColor}} className='grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-white rounded-3xl'>
             {/* first col */}
@@ -32,6 +37,6 @@ const Banner = ({data}) => {
         </div>
     </div>
   )
-}
+})
 
 export default Banner

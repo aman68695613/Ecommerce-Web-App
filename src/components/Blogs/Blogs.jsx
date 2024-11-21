@@ -1,4 +1,5 @@
-// import React from 'react'
+/* eslint-disable react/display-name */
+import React,{ forwardRef } from 'react'
 import Heading from '../Shared/Heading'
 import Img1 from "../../assets/blogs/blog-1.jpg"
 import Img2 from "../../assets/blogs/blog-2.jpg"
@@ -30,9 +31,9 @@ const BlogData=[
     },
   ]
   
-const Blogs = () => {
+const Blogs = forwardRef((props,ref) => {
   return (
-    <div className='my-12'>
+    <div className='my-12' ref={ref}>
         <div className='container'>
 
         {/* Header section */}
@@ -65,6 +66,6 @@ const Blogs = () => {
         </div>
     </div>
   )
-}
+})
 
 export default Blogs

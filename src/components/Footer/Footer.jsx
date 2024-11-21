@@ -1,4 +1,6 @@
-import React from 'react'
+/* eslint-disable react/display-name */
+import AOS from 'aos';
+import React, { forwardRef, useEffect } from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa';
 const FooterLinks = [
     {
@@ -18,9 +20,12 @@ const FooterLinks = [
     link: "/#blog",
     },
 ];
-const Footer = () => {
+const Footer = forwardRef((props,ref) => {
+    useEffect(() => {
+        AOS.refresh(); // Manually refresh AOS after the component renders
+      }, []); // Add dependencies as necessary to re-trigger AOS refresh
   return (
-    <div className='dark:bg-gray-950'>
+    <div className='dark:bg-gray-950' ref={ref}>
       <div className='container'>
         <div className="grid md:grid-cols-3 pb-20 pt-5">
             {/* company details */}
@@ -123,6 +128,6 @@ const Footer = () => {
       </div>
     </div>
   )
-}
+})
 
 export default Footer
