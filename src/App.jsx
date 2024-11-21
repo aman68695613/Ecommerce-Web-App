@@ -69,7 +69,7 @@ function App() {
      <Partners/>
      <Footer />
      <Popup orderPopup={orderPopup}
-     setOrderPopup={setorderPopup}/>
+     handleOrderPopup={handleOrderPopup}/>
     </div>
     </>
   )

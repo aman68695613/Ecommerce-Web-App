@@ -136,7 +136,7 @@ const Navbar = ({handleOrderPopup}) => {
             </div>
 
             {/* Cart Button */}
-            <button className="relative p-3">
+            <button className="relative p-3" onClick={handleOrderPopup}>
               <FaCartShopping
                 className="text-xl text-gray-600 
                   dark:text-gray-400"

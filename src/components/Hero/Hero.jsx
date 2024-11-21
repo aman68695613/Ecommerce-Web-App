@@ -49,7 +49,7 @@ const HeroData=[
 
 
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
 
     const settings = {
         dots: false,
@@ -83,7 +83,8 @@ const Hero = () => {
                                     <Button  
                                     text="Shopping karo" 
                                     bgColor="bg-primary"
-                                    textColor="text-white"  
+                                    textColor="text-white" 
+                                    handler={handleOrderPopup} 
                                     />
                                 </div>
                             </div>
