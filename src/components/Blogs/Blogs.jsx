@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Heading from '../Shared/Heading'
 import Img1 from "../../assets/blogs/blog-1.jpg"
 import Img2 from "../../assets/blogs/blog-2.jpg"
@@ -47,7 +47,7 @@ const Blogs = () => {
                     data-aos='fade-up'
                     data-aos-delay={data.aosDelay}
                     key={data.title}
-                    className='bg-white dark:bg-gra900 '>
+                    className='bg-white dark:bg-gray-900 '>
                         {/* image section */}
                         <div className='overflow-hidden rounded-2xl mb-2'>
                             <img src={data.image} alt='' className='w-full h-[220px] object-cover rounded-2xl hover:scale-105 duration-500'/>

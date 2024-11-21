@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+
 import DarkMode from './DarkMode';
 import { IoMdSearch } from 'react-icons/io';
 import { FaCartShopping } from 'react-icons/fa6';
@@ -55,11 +57,11 @@ const DropdownLinks=[
 const Navbar = ({handleOrderPopup}) => {
   return (
     <div
-      className="bg-white dark:bg-gray-900 dark:text-white 
-        duration-200 relative z-40 w-full"
+      className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md 
+      dark:backdrop-blur-md text-black dark:text-white duration-200 z-40 w-full sticky top-0"
     >
-      <div className="py-4">
-        <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="py-4 ">
+        <div className="container mx-auto flex justify-between items-center px-4 ">
           {/* Logo Section */}
           <div className="flex gap-4 items-center">
             <a
@@ -121,19 +123,21 @@ const Navbar = ({handleOrderPopup}) => {
           </div>
 
           {/* Right Section */}
-          <div className="flex justify-between items-center gap-4">
+          <div className="flex justify items-center gap-4">
             {/* Search Bar */}
             <div className="relative group hidden sm:block">
               <input
                 type="text"
                 placeholder="Search"
-                className="search-bar"
+                className="search-bar bg-transparent dark:bg-transparent"
               />
+              
               <IoMdSearch
-                className="text-xl text-gray-600 group-hover:text-primary 
+                className="  text-xl text-gray-600 group-hover:text-primary 
                   dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200"
               />
             </div>
+            
 
             {/* Cart Button */}
             <button className="relative p-3" onClick={handleOrderPopup}>

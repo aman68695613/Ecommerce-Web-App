@@ -56,8 +56,8 @@ function App() {
   },[])
   return (
     <>
-    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden'>
-    <Navbar handleOrderPopup={handleOrderPopup}/>
+    <div className=' bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden h-screen '>
+    <Navbar handleOrderPopup={handleOrderPopup} />
     <Hero handleOrderPopup={handleOrderPopup}/>
      <Category/>
      <Category2/>
