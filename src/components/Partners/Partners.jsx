@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import brand1 from "../../assets/brand/br-1.png";
 import brand2 from "../../assets/brand/br-2.png";
@@ -11,9 +12,7 @@ const Partners = () => {
     <div
     data-aos='fade-up'
     data-aos-duration='1000'
-
-    
-    className='py-8 mt-24 hidden md:block bg-gray-200 dark:bg-white/10'>
+    className='py-8  hidden md:block bg-gray-200 dark:bg-gray-900'>
       <div className='container'>
         <div className="grid grid-cols-5 gap-3 place-items-center
         opacity-50">
