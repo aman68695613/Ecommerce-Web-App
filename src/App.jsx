@@ -31,7 +31,7 @@ const BannerData={
     image: headphone,
     title2: "Air Solo Bass",
     title3: "Winter Sale",
-    title4: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis",
+    title4: "Enjoy massive savings for winters",
     bgColor: "#f42c37"
     }
 const BannerData2={
@@ -41,7 +41,7 @@ const BannerData2={
     image: smartwatch2,
     title2: "Smart Solo ",
     title3: "Winter Sale",
-    title4: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis",
+    title4: "Winter steal deal for this winter is UP!",
     bgColor: "#2dcc6f"
     }
 

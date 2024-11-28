@@ -67,7 +67,7 @@ const Footer = forwardRef((props,ref) => {
                
                className="inline-block bg-[#ffa31a] font-bold text-black dark:text-white
                py-2 px-4 mt-4 text-sm rounded-xl ">
-                    Visit our Discord
+                    Visit our GitHub.
                </a>
             </div>
             {/*Footer links*/ }
